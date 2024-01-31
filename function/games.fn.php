@@ -1,11 +1,18 @@
 <?php
 function getAllGames($connexiondb){
-    $result = $connexiondb->query("SELECT * FROM jeux_video");
+    $sql = "SELECT * FROM jeux_video";
+    $result = $connexiondb->query($sql);
     $jeux = $result->fetchAll();
     return $jeux;
 }
 
 function deleteGame($connexiondb){
-    $result = $connexiondb->query('DELETE FROM jeux_video WHERE id = :id');
+    if (isset($_GET['ID'])) {
+        $currentId = $_GET['ID'];
+        $sql = "DELETE FROM jeux_video WHERE ID = $currentId";
+        $delete = $connexiondb->query($sql);
+        echo '<p>"' . $jeu['nom'] . '"supprimé avec succès </p>' ;
+    }
+
 }
 

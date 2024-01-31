@@ -11,8 +11,8 @@
     <li class="list-group-item"><?= $jeu['prix'] ?></li>
   </ul>
   <?php echo "<div>
-        <a href='modifier_jeu.php?id=" . $jeu['ID'] . "' >Modifier</a>
-        <a href='supprimer_jeu.php?id=" . $jeu['ID'] . "' >Supprimer</a>
+        <a href='update_game.php?id=" . $jeu['ID'] . "' >Modifier</a>
+        <a href='delete_game.php?id=" . $jeu['ID'] . "' >Supprimer</a>
     </div>
     "; ?>
 </div>

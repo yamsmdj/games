@@ -2,7 +2,6 @@
 require "config/config.php"; 
 require "function/header.fn.php";
 
-
 ?>
 <!DOCTYPE html>
 <html lang="FR-fr">
