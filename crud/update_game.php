@@ -17,32 +17,32 @@ $sql = "UPDATE jeux_video SET nom = '$nom', possesseur = '$possesseur',
 console= '$console' ,prix = $prix, nbre_joueurs_max= $joueurs ,commentaires = '$com' 
 WHERE ID = $currentId";
 
-$db->query($sql);
-}else{
-    $sql = "SELECT * FROM jeux_video WHERE ID = $currentId";
-   $result = $db->query($sql);
-   $jeu = $result->fetch();
-}
+$db->query($sql);}
+//  }else{
+//      $sql = "SELECT * FROM jeux_video WHERE ID = $currentId";
+//     $result = $db->query($sql);
+//     $jeu = $result->fetch();
+// }
 ?>
 
-<form action="" method="POST">
+<form action="../index.php" method="POST" class="d-flex flex-column w-25 m-auto py-5">
     <label for="nom">nom</label>
-    <input type="text" name="nom" value="<?= $jeu['nom'] ?>">
+    <input class="py-2" type="text" name="nom" value="">
 
     <label for="possesseur">possesseur</label>
-    <input type="text" name="possesseur" value="<?= $jeu['possesseur'] ?>">
+    <input class="py-2" type="text" name="possesseur" value="">
 
     <label for="console">console</label>
-    <input type="text" name="console"value="<?= $jeu['console'] ?>">
+    <input class="py-2" type="text" name="console"value="">
 
     <label for="prix">prix</label>
-    <input type="number" name="prix" value="<?= $jeu['prix'] ?>">
+    <input class="py-2" type="number" name="prix" value="">
 
     <label for="nbre_joueurs_max">nbre_joueurs_max</label>
-    <input type="number" name="nbre_joueurs_max" value="<?= $jeu['nbre_joueurs_max'] ?>">
+    <input class="py-2" type="number" name="nbre_joueurs_max" value="">
 
     <label for="commentaires">commentaires</label>
-    <textarea name="commentaires"><?= $jeu['commentaires'] ?> </textarea>
+    <textarea name="commentaires"></textarea>
 
     <button type="submit">Modifier</button>
 </form>

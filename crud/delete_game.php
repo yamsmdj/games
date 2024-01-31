@@ -6,7 +6,7 @@ if(isset($_POST['confirmation'])){
         $currentId = $_GET['id'];
         $sql = "DELETE FROM jeux_video WHERE ID = $currentId";
         $delete = $db->query($sql);
-        echo '<p> Le jeu a bien été supprimer</p>';
+        echo '<p class="alert alert-success"> Le jeu a bien été supprimer</p>';
         echo '<a href="/index.php"> Retour </a>';
     }
     }else{
