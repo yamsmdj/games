@@ -1,7 +1,7 @@
 <?php 
-require "config/config.php"; 
-require "function/header.fn.php";
-
+require_once dirname(__DIR__) . "/config/config.php"; 
+require_once dirname(__DIR__) . "/function/header.fn.php";
+echo __DIR__ . "./config/config.php"; 
 ?>
 <!DOCTYPE html>
 <html lang="FR-fr">
@@ -31,4 +31,3 @@ require "function/header.fn.php";
           <?=nav_item('/contact.php','Contact');?>
         </ul>
   </nav>
-       

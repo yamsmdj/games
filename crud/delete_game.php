@@ -1,5 +1,5 @@
 <?php
-require_once 'utilities/header.php';
+require_once dirname(__DIR__) . '/utilities/header.php';
 
 if(isset($_POST['confirmation'])){
     if (isset($_GET['id'])) {

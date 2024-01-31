@@ -1,5 +1,5 @@
 <?php
-require_once 'utilities/header.php';
+require_once dirname(__DIR__) . '/utilities/header.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter'])){
         $nom = $_POST['nom'];
@@ -43,4 +43,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter'])){
 
 
 <?php
-require_once 'utilities/footer.php' ?>
+require_once dirname(__DIR__) . '/utilities/footer.php' ?>

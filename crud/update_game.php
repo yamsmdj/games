@@ -1,5 +1,6 @@
 <?php 
-require_once 'utilities/header.php';
+require_once dirname(__DIR__) . '/utilities/header.php';
+
 
 $currentId = $_GET['id'];
 
@@ -12,8 +13,7 @@ $prix = $_POST['prix'];
 $joueurs = $_POST['nbre_joueurs_max'];
 $com = $_POST['commentaires'];
 
-
-$sql = "UPDATE jeux_video SET nom = '$nom' ,possesseur = '$possesseur',
+$sql = "UPDATE jeux_video SET nom = '$nom', possesseur = '$possesseur',
 console= '$console' ,prix = $prix, nbre_joueurs_max= $joueurs ,commentaires = '$com' 
 WHERE ID = $currentId";
 
